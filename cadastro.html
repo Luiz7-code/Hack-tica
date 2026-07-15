@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Empresa | Fluxo Humano</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="cadastroContainer">
+
+    <div class="cadastroCard">
+
+        <div class="topoCadastro">
+
+            <div class="iconeCadastro">
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+            <h1>
+
+                Cadastro da Empresa
+
+            </h1>
+
+            <p>
+
+                Preencha os dados abaixo para criar sua empresa.
+
+            </p>
+
+        </div>
+
+        <div class="campo">
+
+            <label>
+
+                Nome da Empresa
+
+            </label>
+
+            <input
+                type="text"
+                id="empresaNome"
+                placeholder="Ex.: Logicomp">
+
+        </div>
+
+        <div class="campo">
+
+            <label>
+
+                Área de atuação
+
+            </label>
+
+            <select id="empresaArea">
+
+                <option>Tecnologia</option>
+
+                <option>Finanças</option>
+
+                <option>Alimentos</option>
+
+                <option>Construção</option>
+
+                <option>Educação</option>
+
+                <option>Saúde</option>
+
+                <option>Indústria</option>
+
+                <option>Administração</option>
+
+                <option>Outro</option>
+
+            </select>
+
+        </div>
+
+        <hr>
+
+        <h2>
+
+            Primeiro Gestor
+
+        </h2>
+
+        <div class="campo">
+
+            <label>
+
+                Nome
+
+            </label>
+
+            <input
+                type="text"
+                id="gestorNome"
+                placeholder="Nome completo">
+
+        </div>
+
+        <div class="campo">
+
+            <label>
+
+                Usuário
+
+            </label>
+
+            <input
+                type="text"
+                id="gestorUsuario"
+                placeholder="Usuário de login">
+
+        </div>
+
+        <div class="campo">
+
+            <label>
+
+                Senha
+
+            </label>
+
+            <input
+                type="password"
+                id="gestorSenha"
+                placeholder="********">
+
+        </div>
+
+        <div class="campo">
+
+            <label>
+
+                Confirmar senha
+
+            </label>
+
+            <input
+                type="password"
+                id="confirmarSenha"
+                placeholder="********">
+
+        </div>
+
+        <button
+            id="btnCriarEmpresa"
+            class="botaoPrincipal">
+
+            Criar Empresa
+
+        </button>
+
+        <button
+            id="btnVoltar"
+            class="botaoSecundario">
+
+            Voltar ao Login
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/banco.js"></script>
+<script src="js/cadastro.js"></script>
+
+</body>
+
+</html>

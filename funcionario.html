@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Funcionário | Fluxo Humano</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- =========================
+SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+<div class="logoSidebar">
+
+<i class="fa-solid fa-users-viewfinder"></i>
+
+<h2>
+
+Fluxo Humano
+
+</h2>
+
+</div>
+
+<nav>
+
+<button class="menu ativo">
+
+<i class="fa-solid fa-clipboard-check"></i>
+
+Registrar Jornada
+
+</button>
+
+<button id="logoutFuncionario">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sair
+
+</button>
+
+</nav>
+
+</aside>
+
+<!-- =========================
+CONTEÚDO
+========================= -->
+
+<main class="conteudo">
+
+<header class="topo">
+
+<div>
+
+<h1>
+
+Olá,
+
+<span id="nomeFuncionario">
+
+Funcionário
+
+</span>
+
+</h1>
+
+<p>
+
+Registre cada momento da sua jornada de trabalho.
+
+</p>
+
+</div>
+
+</header>
+
+<section class="pagina ativa">
+
+<div class="cardGrande">
+
+<h2 id="tituloRegistro">
+
+Entrada
+
+</h2>
+
+<p>
+
+Selecione como você está se sentindo neste momento.
+
+</p>
+
+<div class="humores">
+
+<div class="humor" data-humor="disposto">
+
+😊
+
+<h3>
+
+Disposto
+
+</h3>
+
+</div>
+
+<div class="humor" data-humor="neutro">
+
+😐
+
+<h3>
+
+Neutro
+
+</h3>
+
+</div>
+
+<div class="humor" data-humor="sobrecarregado">
+
+😞
+
+<h3>
+
+Sobrecarregado
+
+</h3>
+
+</div>
+
+</div>
+
+<button
+
+id="registrarPonto"
+
+class="botaoPrincipal">
+
+Registrar Entrada
+
+</button>
+
+</div>
+<div
+id="mensagemSucesso"
+class="cardGrande"
+style="display:none;">
+
+<h2>
+
+✔ Registro realizado
+
+</h2>
+
+<p id="textoSucesso">
+
+Seu registro foi salvo.
+
+</p>
+
+</div>
+
+<div class="cardGrande">
+
+<h2>
+
+Etapas da Jornada
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Etapa</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Entrada</td>
+
+<td id="statusEntrada">
+
+⏳ Pendente
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Saída para almoço</td>
+
+<td id="statusSaidaAlmoco">
+
+⏳ Pendente
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Volta do almoço</td>
+
+<td id="statusVoltaAlmoco">
+
+⏳ Pendente
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Saída</td>
+
+<td id="statusSaida">
+
+⏳ Pendente
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="js/banco.js"></script>
+<script src="js/funcionario.js"></script>
+
+</body>
+
+</html>

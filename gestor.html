@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Painel do Gestor | Fluxo Humano</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- ==============================
+SIDEBAR
+============================== -->
+
+<aside class="sidebar">
+
+<div class="logoSidebar">
+
+<i class="fa-solid fa-users-viewfinder"></i>
+
+<h2>
+
+Fluxo Humano
+
+</h2>
+
+</div>
+
+<nav>
+
+<button class="menu ativo"
+data-tela="dashboard">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</button>
+
+<button class="menu"
+data-tela="funcionarios">
+
+<i class="fa-solid fa-users"></i>
+
+Funcionários
+
+</button>
+
+<button class="menu"
+data-tela="relatorios">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Relatórios
+
+</button>
+
+<button class="menu"
+data-tela="empresa">
+
+<i class="fa-solid fa-building"></i>
+
+Empresa
+
+</button>
+
+<button id="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Sair
+
+</button>
+
+</nav>
+
+</aside>
+
+<!-- ==============================
+CONTEÚDO
+============================== -->
+
+<main class="conteudo">
+
+<header class="topo">
+
+<div>
+
+<h1>
+
+Boa tarde,
+
+<span id="nomeGestor">
+
+Carlos
+
+</span>
+
+</h1>
+
+<p>
+
+Último acesso:
+
+<span id="ultimoAcesso">
+
+07/08/2025 - 19:30
+
+</span>
+
+</p>
+
+</div>
+
+</header>
+
+<!-- ==============================
+DASHBOARD
+============================== -->
+
+<section
+id="dashboard"
+class="pagina ativa">
+
+<div class="statusEmpresa">
+
+<div class="statusIcone">
+
+🟢
+
+</div>
+
+<div>
+
+<h2>
+
+Saúde Psicossocial Boa
+
+</h2>
+
+<p>
+
+Empresa acima do índice de referência.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+ICPO
+
+</h3>
+
+<h1 id="icpo">
+
+84
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+ICPR
+
+</h3>
+
+<h1 id="icpr">
+
+81
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Funcionários
+
+</h3>
+
+<h1 id="qtdFuncionarios">
+
+6
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Registros Hoje
+
+</h3>
+
+<h1 id="registrosHoje">
+
+5
+
+</h1>
+
+</div>
+
+</div>
+
+<!-- GRÁFICO -->
+
+<div class="cardGrafico">
+
+    <div class="tituloGrafico">
+
+        <div>
+
+            <h2>Evolução do ICPO</h2>
+
+            <p>Últimos 7 dias</p>
+
+        </div>
+
+    </div>
+
+    <div class="graficoContainer">
+
+        <canvas id="graficoICPO"></canvas>
+
+    </div>
+
+</div>
+
+<!-- ==============================
+FUNCIONÁRIOS
+============================== -->
+
+<div class="cardGrande">
+
+    <h2>
+
+        Funcionários
+
+    </h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Nome</th>
+
+                <th>Setor</th>
+
+                <th>Status</th>
+
+                <th>ICPI</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tabelaFuncionarios">
+
+            <tr>
+
+                <td>João Silva</td>
+
+                <td>TI</td>
+
+                <td>🟢 Saudável</td>
+
+                <td>92</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Maria Oliveira</td>
+
+                <td>RH</td>
+
+                <td>🟡 Atenção</td>
+
+                <td>67</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Pedro Santos</td>
+
+                <td>Financeiro</td>
+
+                <td>🔴 Crítico</td>
+
+                <td>39</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Ana Costa</td>
+
+                <td>Marketing</td>
+
+                <td>🟢 Saudável</td>
+
+                <td>88</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Lucas Almeida</td>
+
+                <td>Produção</td>
+
+                <td>🟢 Saudável</td>
+
+                <td>81</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Juliana Ferreira</td>
+
+                <td>Comercial</td>
+
+                <td>🟡 Atenção</td>
+
+                <td>58</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- RECOMENDAÇÕES -->
+
+<div class="cardGrande">
+
+    <h2>
+
+        Recomendações
+
+    </h2>
+
+    <div class="listaRecomendacoes">
+
+        <div class="recomendacao">
+
+            ✔ Manter as ações de segurança psicológica.
+
+        </div>
+
+        <div class="recomendacao">
+
+            ✔ Acompanhar funcionários em atenção.
+
+        </div>
+
+        <div class="recomendacao">
+
+            ✔ Incentivar pausas durante a jornada.
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ==============================
+FUNCIONÁRIOS
+============================== -->
+
+<section
+id="funcionarios"
+class="pagina">
+
+<div class="cardGrande">
+
+<h2>
+
+Cadastrar Funcionário
+
+</h2>
+
+<div class="formGrid">
+
+<div class="campo">
+
+<label>
+
+Nome
+
+</label>
+
+<input
+type="text"
+id="novoNome">
+
+</div>
+
+<div class="campo">
+
+<label>
+
+Usuário
+
+</label>
+
+<input
+type="text"
+id="novoUsuario">
+
+</div>
+
+<div class="campo">
+
+<label>
+
+Senha
+
+</label>
+
+<input
+type="password"
+id="novaSenha">
+
+</div>
+
+<div class="campo">
+
+<label>
+
+Setor
+
+</label>
+
+<input
+type="text"
+id="novoSetor">
+
+</div>
+
+<div class="campo">
+
+<label>
+
+Tipo da conta
+
+</label>
+
+<select id="novoTipo">
+
+<option>
+
+Funcionário
+
+</option>
+
+<option>
+
+Gestor
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button
+class="botaoPrincipal"
+id="btnCadastrarFuncionario">
+
+Cadastrar Funcionário
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==============================
+RELATÓRIOS
+============================== -->
+
+<section
+id="relatorios"
+class="pagina">
+
+<div class="cardGrande">
+
+<h2>
+
+Relatórios
+
+</h2>
+
+<p>
+
+Nesta versão demonstrativa, os relatórios são exibidos em tela.
+
+Em uma versão futura será possível exportar PDF e Excel.
+
+</p>
+
+<ul>
+
+<li>✔ Evolução do ICPO</li>
+
+<li>✔ Funcionários em atenção</li>
+
+<li>✔ Média semanal</li>
+
+<li>✔ Histórico de registros</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==============================
+EMPRESA
+============================== -->
+
+<section
+id="empresa"
+class="pagina">
+
+<div class="cardGrande">
+
+<h2>
+
+Dados da Empresa
+
+</h2>
+
+<div class="empresaGrid">
+
+<div>
+
+<strong>
+
+Empresa
+
+</strong>
+
+<p>
+
+Logicomp
+
+</p>
+
+</div>
+
+<div>
+
+<strong>
+
+Área
+
+</strong>
+
+<p>
+
+Tecnologia
+
+</p>
+
+</div>
+
+<div>
+
+<strong>
+
+Funcionários
+
+</strong>
+
+<p>
+
+6
+
+</p>
+
+</div>
+
+<div>
+
+<strong>
+
+Gestores
+
+</strong>
+
+<p>
+
+1
+
+</p>
+
+</div>
+
+<div>
+
+<strong>
+
+ICPO Atual
+
+</strong>
+
+<p>
+
+84
+
+</p>
+
+</div>
+
+<div>
+
+<strong>
+
+ICPR
+
+</strong>
+
+<p>
+
+81
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/banco.js"></script>
+<script src="js/gestor.js"></script>
+
+</body>
+
+</html>
