@@ -10,7 +10,7 @@ const empresa = empresaAtual();
 
 if (!gestor || gestor.tipo !== "gestor") {
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
 }
 
@@ -24,7 +24,7 @@ if (btnLogout) {
 
         limparSessao();
 
-        window.location.href = "login.html";
+        window.location.href = "index.html";
 
     };
 

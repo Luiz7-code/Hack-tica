@@ -96,7 +96,7 @@ btnCriarEmpresa.onclick=()=>{
 
     alert("Empresa cadastrada com sucesso!");
 
-    window.location.href="login.html";
+    window.location.href="index.html";
 
 };
 
@@ -112,7 +112,7 @@ if(btnVoltar){
 
 btnVoltar.onclick=()=>{
 
-    window.location.href="login.html";
+    window.location.href="index.html";
 
 };
 

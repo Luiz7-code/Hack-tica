@@ -9,7 +9,7 @@ const empresa = empresaAtual();
 
 if (!funcionario || funcionario.tipo !== "funcionario") {
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
 }
 
@@ -33,7 +33,7 @@ if (btnLogout) {
 
         limparSessao();
 
-        window.location.href = "login.html";
+        window.location.href = "index.html";
 
     };
 
